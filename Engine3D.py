@@ -7,23 +7,25 @@ height = 540
 
 rend = Renderer(width, height)
 
-#rend.active_texture = Texture('models/body.bmp')
+rend.active_texture = Texture('models/body.bmp')
 
 rend.dirLight = V3(1, 0, 0)
 
-rend.active_shader = flat
-
-rend.glLoadModel("models/ufo.obj",
-                 translate = V3(-8, 3, -10),
-                 scale = V3(1,1,1),
+rend.active_shader = gourad
+escala  = 2
+rend.glLoadModel("models/model.obj",
+                 translate = V3(1, 1, 1),
+                 scale = V3(escala, escala, escala),
                  rotate = V3(0,0,0))
+
 """ rend.active_shader = redScale
 
 rend.glLoadModel("models/model.obj",
                  translate = V3(-4, 3, -10)
                  scale = V3(2,2,2),
                  rotate = V3(0,0,0))
-
+ """
+""" 
 rend.active_shader = blueScale
 
 rend.glLoadModel("models/model.obj",
@@ -33,11 +35,11 @@ rend.glLoadModel("models/model.obj",
 
 rend.active_shader = grayScale """
 
-rend.glLoadModel("models/model.obj",
+""" rend.glLoadModel("models/model.obj",
                  translate = V3(4, 3, -10),
                  scale = V3(2,2,2),
                  rotate = V3(0,0,0))
-
+ """
 #rend.active_texture = Texture("models/model.bmp")
 #rend.active_shader = gourad
 #rend.glLoadModel("models/model.obj",
