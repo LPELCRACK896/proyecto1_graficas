@@ -209,7 +209,12 @@ class Renderer(object):
         v = V4(vertex[0], vertex[1], vertex[2], 1)
         vt = lpm.matriz_por_vector(self.viewportMatrix, lpm.matriz_por_vector(self.projectionMatrix, lpm.matriz_por_vector(self.viewMatrix, v)))#self.viewportMatrix @ self.projectionMatrix @ self.viewMatrix @ v
         #vt = vt[0]
-
+        try:
+            vf = V3(vt[0] / vt[3],
+                    vt[1] / vt[3],
+                    vt[2] / vt[3])
+        except:
+            print(vt)   
         vf = V3(vt[0] / vt[3],
                 vt[1] / vt[3],
                 vt[2] / vt[3]) 
@@ -245,6 +250,7 @@ class Renderer(object):
             vn0 = self.glDirTransform(vn0, rotationMatrix)
             vn1 = self.glDirTransform(vn1, rotationMatrix)
             vn2 = self.glDirTransform(vn2, rotationMatrix)
+
             self.glTriangle_bc(A, B, C,
                                verts = (v0, v1, v2),
                                texCoords = (vt0, vt1, vt2),

@@ -59,7 +59,7 @@ def matriz_por_vector(matriz, vector):
     for fila in matriz:
         res = 0
         for elemnt in range(len(fila)):
-            res += (fila[elemnt]*float(vector[elemnt]))
+            res += (fila[elemnt]*vector[elemnt])
         resultado.append(res)
     return resultado
 
@@ -89,7 +89,7 @@ def radians_to_grades(radianes):
 
 def normalizaVector(vector: list):
     magnitud = magnitud_vector(vector)
-    return [a/magnitud for a in vector] if magnitud!=0 else vector
+    return [a/magnitud for a in vector]
 
 def productoPunto(vector_1, vector_2):
         if len(vector_1)!=len(vector_2):
