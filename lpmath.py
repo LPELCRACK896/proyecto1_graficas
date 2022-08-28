@@ -59,7 +59,7 @@ def matriz_por_vector(matriz, vector):
     for fila in matriz:
         res = 0
         for elemnt in range(len(fila)):
-            res += (fila[elemnt]*vector[elemnt])
+            res += (fila[elemnt]*float(vector[elemnt]))
         resultado.append(res)
     return resultado
 
