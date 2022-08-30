@@ -15,40 +15,34 @@ rend.active_shader = textureBlend
 
 rend.glClearBackground()
 
-""" rend.glLoadModel("models/wall.obj",
-                 translate = V3(-15, -5.5, -22),
-                 scale = V3(0.5,0.5,0.5),
-                 rotate = V3(10,-40,-20)) """
-""" rend.glLoadModel("models/SigSauerP250.obj",
-                 translate = V3(-12, -5.5, -22),
-                 scale = V3(1,1,1),
-                 rotate = V3(0,0,0)) """
-rend.active_texture = Texture('models/sage_wall_texture.bmp')
 
-rend.glLoadModel("models/wall.obj",
+rend.active_texture = Texture('models/wall/sage_wall_texture.bmp')
+rend.glLoadModel("models/wall/wall.obj",
                  translate = V3(-25, -9, -40),
                  scale = V3(1,1,1),
                  rotate = V3(0,60,-5))
-rend.active_texture = Texture('models/gun_BC.bmp')
 
-rend.glLoadModel("models/SigSauerP250.obj",
+
+rend.active_texture = Texture('models/gun/gun_BC.bmp')
+
+rend.glLoadModel("models/gun/SigSauerP250.obj",
                  translate = V3(-13, -5.5, -18),
                  scale = V3(1,1,1),
                  rotate = V3(0,0,80))
-                 
-rend.active_texture = Texture('models/Sword01_BaseColor.bmp')
+                
+rend.active_texture = Texture('models/sword/Sword01_BaseColor.bmp')
 
-rend.glLoadModel("models/sword2.obj",
+rend.glLoadModel("models/sword/sword2.obj",
                  translate = V3(30, -5, -22),
                  scale = V3(.1,.1,.1),
                  rotate = V3(-120,-30,120))
 
-rend.active_texture = None#Texture('models/Sword01_BaseColor.bmp')
+""" rend.active_texture = None
 
-rend.glLoadModel("models/MK2.obj",
-                 translate = V3(1, 1, 1),
-                 scale = V3(10,10,10),
-                 rotate = V3(-120,-30,120))
+rend.glLoadModel("models/Gun.obj",
+                 translate =V3(1, 1, 1),
+                 scale = V3(4,4,4),
+                 rotate = V3(-120,-30,120))  """
 
 """ rend.active_shader = redScale
 
