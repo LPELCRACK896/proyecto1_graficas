@@ -11,10 +11,10 @@ rend = Renderer(width, height)
 rend.background = Texture('models/ascent_fondo.bmp')
 #rend.dirLight = V3(1, 0, 0)
 
-rend.active_shader = textureBlend
 
 rend.glClearBackground()
 
+rend.active_shader = grayScale
 
 rend.active_texture = Texture('models/wall/sage_wall_texture.bmp')
 rend.glLoadModel("models/wall/wall.obj",
@@ -23,6 +23,7 @@ rend.glLoadModel("models/wall/wall.obj",
                  rotate = V3(0,60,-5))
 
 
+rend.active_shader = textureBlend
 rend.active_texture = Texture('models/gun/gun_BC.bmp')
 
 rend.glLoadModel("models/gun/SigSauerP250.obj",
@@ -33,10 +34,24 @@ rend.glLoadModel("models/gun/SigSauerP250.obj",
 rend.active_texture = Texture('models/sword/Sword01_BaseColor.bmp')
 
 rend.glLoadModel("models/sword/sword2.obj",
-                 translate = V3(30, -5, -22),
+                 translate = V3(32, -2, -30),
                  scale = V3(.1,.1,.1),
-                 rotate = V3(-120,-30,120))
+                 rotate = V3(-50,-60,120))
+""" rend.active_texture =   None #Texture('models/barrel/poison_barrel_text.bmp')
 
+rend.glLoadModel("models/barrel/barrel.obj",
+                 translate = V3(0, 0, 0),
+                 scale = V3(1,1,1),
+                 rotate = V3(0,0,0)) """
+
+""" rend.active_texture =   Texture('models/tree/tree.bmp')
+
+rend.glLoadModel("models/tree/tree.obj",
+                 translate = V3(0, 0, 0),
+                 scale = V3(1,1,1),
+                 rotate = V3(0,0,0)) """
+
+    
 """ rend.active_texture = None
 
 rend.glLoadModel("models/Gun.obj",
@@ -87,4 +102,3 @@ rend.active_shader = grayScale """
 
 
 rend.glFinish("output.bmp")
-
